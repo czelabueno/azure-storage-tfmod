@@ -37,8 +37,6 @@ resource "azurerm_storage_account" "iacexample" {
   account_replication_type = var.account_replication_type
   account_kind              = "StorageV2"
   tags  = local.tags
-
-  static_website  {}
     
 }
 
