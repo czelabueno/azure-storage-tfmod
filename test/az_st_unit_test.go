@@ -17,10 +17,6 @@ func Test_AzStorageExample(t *testing.T) {
 
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../",
-		Vars: map[string]interface{}{
-			"account_tier":             "Standard",
-			"account_replication_type": "LRS",
-		},
 	})
 
 	defer terraform.Destroy(t, terraformOptions)
