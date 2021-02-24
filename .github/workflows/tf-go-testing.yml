@@ -46,9 +46,7 @@ jobs:
         go-version: 1.15
 
     - name: Build
-      working-directory: $TERRAFORM_CLI_PATH/test
-      run: go build -v
+      run: cd test && go build -v
 
     - name: Unit Test
-      working-directory: $TERRAFORM_CLI_PATH/test
-      run: go test -count=1 -run Test_AzStorageExample
+      run: cd test && go test -count=1 -run Test_AzStorageExample
