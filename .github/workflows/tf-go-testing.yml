@@ -45,8 +45,5 @@ jobs:
       with:
         go-version: 1.15
 
-    - name: Build
-      run: cd test && go build -v
-
     - name: Unit Test
       run: cd test && go test -count=1 -run Test_AzStorageExample
