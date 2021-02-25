@@ -24,7 +24,7 @@ resource "random_integer" "iacexample" {
 }
 
 resource "azurerm_resource_group" "iacexample" {
-  name     = "iacunittesting"
+  name     = upper("${var.type}_${var.stage}")
   location = "eastus2"
   tags = local.tags
 }
@@ -39,7 +39,7 @@ resource "azurerm_storage_account" "iacexample" {
   tags  = local.tags
   
   static_website {}
-  
+
 }
 
 resource "azurerm_storage_container" "iacexample" {
