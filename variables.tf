@@ -1,3 +1,9 @@
+variable "stage" {
+    type = string
+    default = "LANDINGZONE"
+  
+}
+
 variable account_tier {
     type = string
 }
