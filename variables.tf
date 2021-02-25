@@ -4,6 +4,11 @@ variable "stage" {
   
 }
 
+variable "type" {
+    type = string
+    default = "module"
+}
+
 variable account_tier {
     type = string
 }
