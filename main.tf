@@ -38,7 +38,9 @@ resource "azurerm_storage_account" "iacexample" {
   account_kind              = "StorageV2"
   tags  = local.tags
   
-  static_website {}
+  static_website {
+    index_document = "index.html"
+  }
 
 }
 
