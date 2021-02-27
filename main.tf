@@ -43,9 +43,3 @@ resource "azurerm_storage_account" "iacexample" {
   }
 
 }
-
-resource "azurerm_storage_container" "iacexample" {
-  name                  = "contentexample"
-  storage_account_name  = azurerm_storage_account.iacexample.name
-  container_access_type = "private"
-}
